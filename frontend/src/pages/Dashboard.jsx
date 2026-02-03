@@ -70,6 +70,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import MainLayout from "../layouts/MainLayout";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -121,6 +122,8 @@ const Dashboard = () => {
   }
 
   return (
+    <MainLayout>
+      {
     <div style={{ padding: "20px" }}>
       <h1>📊 BillBuddy Dashboard</h1>
 
@@ -173,7 +176,8 @@ const Dashboard = () => {
           </tbody>
         </table>
       )}
-    </div>
+    </div>}
+    </MainLayout>
   );
 };
 
