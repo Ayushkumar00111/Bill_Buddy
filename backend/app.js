@@ -7,6 +7,7 @@ import errorHandler from "./middlewares/error.middleware.js";
 import healthRoutes from "./routes/health.routes.js";
 import subscriptionRoutes from "./routes/subscriptionRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
+import "./cron/subscriptionReminder.js";
 
 dotenv.config();
 connectDB();

@@ -36,14 +36,36 @@ export const addSubscription = async (req, res) => {
 };
 
 // GET ALL USER SUBSCRIPTIONS
+
 export const getSubscriptions = async (req, res) => {
   try {
-    const subscriptions = await Subscription.find({
-      user: req.user._id
-    }).sort({ createdAt: -1 });
+    const subs = await Subscription.find({ user: req.user.id });
 
-    res.json(subscriptions);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.json({
+      success: true,
+      subscriptions: subs, // 🔥 VERY IMPORTANT
+    });
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
   }
+};
+export const updateSubscription = async (req, res) => {
+  const sub = await Subscription.findById(req.params.id);
+  if (!sub) return res.status(404).json({ message: "Not found" });
+
+  if (sub.user.toString() !== req.user.id)
+    return res.status(401).json({ message: "Unauthorized" });
+
+  Object.assign(sub, req.body);
+  await sub.save();
+
+  res.json({ success: true, subscription: sub });
+};
+
+export const deleteSubscription = async (req, res) => {
+  const sub = await Subscription.findById(req.params.id);
+  if (!sub) return res.status(404).json({ message: "Not found" });
+
+  await sub.deleteOne();
+  res.json({ success: true });
 };
