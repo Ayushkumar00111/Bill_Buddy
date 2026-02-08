@@ -1,30 +1,60 @@
 import { useState } from "react";
-import API from "../api/api";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
 
-export default function Login() {
-  const [form, setForm] = useState({ email: "", password: "" });
+const Login = () => {
   const navigate = useNavigate();
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [error, setError] = useState("");
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
 
   const submit = async (e) => {
     e.preventDefault();
-    const { data } = await API.post("/auth/login", form);
-    localStorage.setItem("token", data.token);
-    navigate("/dashboard");
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        formData
+      );
+
+      localStorage.setItem("token", res.data.token);
+      navigate("/dashboard");
+    } catch (err) {
+      setError(err.response?.data?.message || "Login failed");
+    }
   };
 
   return (
-   <div className="container">
-      <div className="card">
-        <h2>BillBuddy Login</h2>
-        <form onSubmit={submit}>
-          <input placeholder="Email"
-            onChange={e=>setForm({...form,email:e.target.value})}/>
-          <input type="password" placeholder="Password"
-            onChange={e=>setForm({...form,password:e.target.value})}/>
-          <button>Login</button>
-        </form>
-      </div>
+    <div className="auth-container">
+      <form className="auth-card" onSubmit={submit}>
+        <h2>Login</h2>
+
+        {error && <p className="error">{error}</p>}
+
+        <input name="email" placeholder="Email" onChange={handleChange} />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          onChange={handleChange}
+        />
+
+        <button type="submit">Login</button>
+
+        <p>
+          Don’t have an account? <Link to="/register">Register</Link>
+        </p>
+      </form>
     </div>
   );
-}
+};
+
+export default Login;
