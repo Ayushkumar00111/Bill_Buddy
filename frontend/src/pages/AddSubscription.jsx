@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import MainLayout from "../layout/MainLayout";
 const AddSubscription = () => {
   const navigate = useNavigate();
 
@@ -50,11 +50,18 @@ const AddSubscription = () => {
   };
 
   return (
-    <div style={{ maxWidth: "400px", margin: "50px auto" }}>
-      <h2>Add Subscription</h2>
+   
+      
+<MainLayout>
+   <div  className="page-wrapper" >
 
-      <form onSubmit={onSubmit}>
+
+
+      <form className="form-container" onSubmit={onSubmit}>
+        
+    <h2 className="form-title">Add Subscription</h2>
         <input
+        className="form-group"
           type="text"
           name="name"
           placeholder="Subscription Name (Netflix)"
@@ -64,6 +71,7 @@ const AddSubscription = () => {
         />
 
         <input
+        className="form-group"
           type="number"
           name="price"
           placeholder="Price"
@@ -73,6 +81,7 @@ const AddSubscription = () => {
         />
 
         <input
+        className="form-group"
           type="date"
           name="startDate"
           value={startDate}
@@ -81,16 +90,35 @@ const AddSubscription = () => {
         />
 
         <input
+        className="form-group"
           type="date"
           name="endDate"
           value={endDate}
           onChange={onChange}
           required
         />
+ <div className="form-group">
+          <label>Billing Cycle</label>
+          <select>
+            <option>Monthly</option>
+            <option>Yearly</option>
+          </select>
+        </div>
 
-        <button type="submit">Add Subscription</button>
+        <button className="primary-btn" type="submit">Add Subscription</button>
       </form>
-    </div>
+    
+</div>
+
+    </MainLayout>
+
+
+
+
+    
+
+  
+
   );
 };
 

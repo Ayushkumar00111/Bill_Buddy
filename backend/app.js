@@ -1,5 +1,9 @@
-import express from "express";
 import dotenv from "dotenv";
+dotenv.config();
+import express from "express";
+
+
+import User from "./models/User.js";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -8,8 +12,9 @@ import healthRoutes from "./routes/health.routes.js";
 import subscriptionRoutes from "./routes/subscriptionRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
 import "./cron/subscriptionReminder.js";
+console.log("JWT CHECK:", process.env.JWT_SECRET);
 
-dotenv.config();
+
 connectDB();
 
 const app = express();
@@ -34,6 +39,11 @@ app.get("/", (req, res) => {
 
 // Error handler
 app.use(errorHandler);
+//backend checking ...
+app.get("/check-users", async (req, res) => {
+  const users = await User.find();
+  res.json(users);
+});
 
 // Server start
 const PORT = process.env.PORT || 5000;

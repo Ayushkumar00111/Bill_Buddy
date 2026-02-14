@@ -49,18 +49,18 @@ export const getSubscriptions = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
-export const updateSubscription = async (req, res) => {
-  const sub = await Subscription.findById(req.params.id);
-  if (!sub) return res.status(404).json({ message: "Not found" });
+// export const updateSubscription = async (req, res) => {
+//   const sub = await Subscription.findById(req.params.id);
+//   if (!sub) return res.status(404).json({ message: "Not found" });
 
-  if (sub.user.toString() !== req.user.id)
-    return res.status(401).json({ message: "Unauthorized" });
+//   if (sub.user.toString() !== req.user.id)
+//     return res.status(401).json({ message: "Unauthorized" });
 
-  Object.assign(sub, req.body);
-  await sub.save();
+//   Object.assign(sub, req.body);
+//   await sub.save();
 
-  res.json({ success: true, subscription: sub });
-};
+//   res.json({ success: true, subscription: sub });
+// };
 
 export const deleteSubscription = async (req, res) => {
   const sub = await Subscription.findById(req.params.id);
@@ -68,4 +68,28 @@ export const deleteSubscription = async (req, res) => {
 
   await sub.deleteOne();
   res.json({ success: true });
+};
+//update subcription
+export const updateSubscription = async (req, res) => {
+  try {
+    const subscription = await Subscription.findById(req.params.id);
+
+    if (!subscription) {
+      return res.status(404).json({ message: "Subscription not found" });
+    }
+
+    if (subscription.user.toString() !== req.user.id) {
+      return res.status(401).json({ message: "Not authorized" });
+    }
+
+    const updated = await Subscription.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    res.json(updated);
+  } catch (error) {
+    res.status(500).json({ message: "Server error" });
+  }
 };

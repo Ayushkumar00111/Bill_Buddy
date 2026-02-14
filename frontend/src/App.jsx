@@ -1,27 +1,44 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
-import ProtectedRoute from "./components/ProtectedRoute";
+import ProtectedRoute from "./routes/ProtectedRoute";
 import AddSubscription from "./pages/AddSubscription";
-
+import MainLayout from "./layout/MainLayout";
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Register />} />
+     
+        <Route path="/add-subscription"
+        
+        element={
+           <ProtectedRoute>
+          
+        <AddSubscription />
+      
+      </ProtectedRoute>
+      } 
+        
+        />
+ {/* PUBLIC PAGES (NO LAYOUT) */}
         <Route path="/login" element={<Login />} />
-        <Route path="/add-subscription" element={<AddSubscription />} />
-
-        <Route
+        <Route path="/" element={<Register />} />
+       <Route
           path="/dashboard"
           element={
-            <ProtectedRoute>
+             <ProtectedRoute>
+            <MainLayout>
               <Dashboard />
+            </MainLayout>
             </ProtectedRoute>
           }
         />
-        
+        <Route path="/profile" element={<Profile />} />
+
+      
       </Routes>
      
 
