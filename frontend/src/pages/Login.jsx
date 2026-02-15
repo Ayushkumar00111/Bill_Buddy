@@ -25,7 +25,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://bill-buddy-bg4f.onrender.com/api/auth/register",
         formData
       );
 
