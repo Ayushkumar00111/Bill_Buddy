@@ -12,7 +12,7 @@ A Full Stack Subscription Management App
 - Protected Routes
 - MongoDB Database
 - Fully Deployed (Frontend + Backend)
-
+<img width="1345" height="603" alt="image" src="https://github.com/user-attachments/assets/69a779eb-a765-42de-a788-63a3a63874f0" />
 ## 🛠 Tech Stack
 Frontend:
 - React (Vite)
@@ -29,7 +29,7 @@ Backend:
 ## 🌐 Live Demo
 Frontend: https://bill-buddy-woad.vercel.app
 Backend: https://your-backend.onrender.com
-<img width="1345" height="603" alt="image" src="https://github.com/user-attachments/assets/69a779eb-a765-42de-a788-63a3a63874f0" />
+
 ## ⚙️ Setup Locally
 
 ### Backend
@@ -41,4 +41,23 @@ npm run dev
 cd frontend
 npm install
 npm run dev
+
+📈 Improvements
+
+Email notifications for upcoming renewals
+
 <img width="1220" height="602" alt="image" src="https://github.com/user-attachments/assets/36bab180-f1cf-4ccd-b0ff-26e764ce332b" />
+
+Subscription analytics with charts
+
+Dark mode UI
+
+👨‍💻 Author
+
+Ayush Kumar
+Final Year B.Tech (CSE) Student
+MERN Stack Developer
+
+🔗 LinkedIn: https://linkedin.com/in/ayush-kumar-232a1633b
+
+💻 GitHub: https://github.com/Ayushkumar00111
