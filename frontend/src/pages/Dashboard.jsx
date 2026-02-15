@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import SubscriptionTable from "../components/SubsciptionTable";
 import StatCard from "../components/StatCard";
+import Footer from "../components/Footer";
 import SpendChart from "../components/SpendChart";
 export default function Dashboard() {
   const [subs, setSubs] = useState([]);
@@ -148,7 +149,7 @@ const upcoming = subs.filter((s) => {
         )} */}
       </section>
 
-
+<Footer />
 
     </div>
     

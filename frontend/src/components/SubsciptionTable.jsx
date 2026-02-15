@@ -39,7 +39,7 @@ export default function SubscriptionTable({ subs, refresh }) {
   const updateSubscription = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/subscriptions/${editingId}`,
+        `https://bill-buddy-bg4f.onrender.com/api/subscriptions/${editingId}`,
         editForm,
         {
           headers: { Authorization: `Bearer ${token}` },
