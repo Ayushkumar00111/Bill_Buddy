@@ -55,3 +55,22 @@
 .primary-btn:hover {
   opacity: 0.9;
 }
+.footer {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  color: #cbd5e1;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer h3 {
+  color: #6366f1;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.footer p {
+  margin: 6px 0;
+  font-size: 14px;
+}

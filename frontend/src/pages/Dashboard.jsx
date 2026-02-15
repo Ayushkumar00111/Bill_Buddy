@@ -93,16 +93,13 @@ const upcoming = subs.filter((s) => {
         <StatCard title="Wasted Money" value={` ${wastedMoney}`} />
       </div>
       <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
+    
+     
 <SpendChart subs={subs} />
 <br></br>
       <br></br>
       <br></br>
-      <br></br>
-      <br></br>
+      
       {/* SUBSCRIPTIONS LIST */}
       <section className="subscriptions">
         <h2>Your Subscriptions</h2>
@@ -118,7 +115,7 @@ const upcoming = subs.filter((s) => {
 </div>
 
     </div>
-    //start fotter 
+
     
 
 
