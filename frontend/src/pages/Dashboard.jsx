@@ -110,48 +110,19 @@ const upcoming = subs.filter((s) => {
 
 <SubscriptionTable subs={subs} refresh={fetchSubscriptions} />
 
-        {/* {subs.length === 0 ? (
-          <div className="empty-state">
-            <h3>No subscriptions added yet</h3>
-            <p>Add your first subscription to start tracking.</p>
-          </div>
-        ) : (
-          <table className="subs-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Price</th>
-                <th>Start</th>
-                <th>End</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {subs.map((sub) => {
-                const isActive =
-                  new Date(sub.endDate) >= today;
-
-                return (
-                  <tr key={sub._id}>
-                    <td>{sub.name}</td>
-                    <td>₹ {sub.price}</td>
-                    <td>{new Date(sub.startDate).toLocaleDateString()}</td>
-                    <td>{new Date(sub.endDate).toLocaleDateString()}</td>
-                    <td className={isActive ? "active" : "expired"}>
-                      {isActive ? "Active" : "Expired"}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        )} */}
+        
       </section>
-
+<div>
+  
 <Footer />
+</div>
 
     </div>
+    //start fotter 
     
+
+
   );
+  
+
 }
