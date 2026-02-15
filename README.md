@@ -1,3 +1,5 @@
+<img width="1345" height="603" alt="image" src="https://github.com/user-attachments/assets/69a779eb-a765-42de-a788-63a3a63874f0" />
+
 # Bill Buddy 💰
 
 A Full Stack Subscription Management App
