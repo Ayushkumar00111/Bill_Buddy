@@ -28,7 +28,7 @@ const AddSubscription = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "http://localhost:5000/api/subscriptions",
+        "https://bill-buddy-bg4f.onrender.com/api/subscriptions",
         {
           name,
           price,
@@ -97,13 +97,7 @@ const AddSubscription = () => {
           onChange={onChange}
           required
         />
- <div className="form-group">
-          <label>Billing Cycle</label>
-          <select>
-            <option>Monthly</option>
-            <option>Yearly</option>
-          </select>
-        </div>
+
 
         <button className="primary-btn" type="submit">Add Subscription</button>
       </form>
