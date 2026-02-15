@@ -16,7 +16,7 @@ export default function Dashboard() {
     const fetchSubscriptions = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/subscriptions",
+          "https://bill-buddy-bg4f.onrender.com/api/subscriptions",
           {
             headers: {
               Authorization: `Bearer ${token}`,
