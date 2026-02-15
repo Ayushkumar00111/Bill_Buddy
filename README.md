@@ -57,7 +57,7 @@ Dark mode UI
 Ayush Kumar
 Final Year B.Tech (CSE) Student
 MERN Stack Developer
-
+2026
 🔗 LinkedIn: https://linkedin.com/in/ayush-kumar-232a1633b
 
 💻 GitHub: https://github.com/Ayushkumar00111
