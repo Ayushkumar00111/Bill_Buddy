@@ -90,7 +90,7 @@ const Register = () => {
     setError("");
 
     try {
-      await axios.post("http://localhost:5000/api/auth/register", formData);
+      await axios.post("https://bill-buddy-bg4f.onrender.com/api/auth/register", formData);
 
       // ✅ SUCCESS → LOGIN PAGE
       navigate("/login");
