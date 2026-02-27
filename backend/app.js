@@ -21,7 +21,7 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: "https://bill-buddy-woad.vercel.app",
+  origin: "http://localhost:5173",
   credentials: true,
 }));
 app.use(express.json());

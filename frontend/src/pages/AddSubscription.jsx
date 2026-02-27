@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -28,7 +29,7 @@ const AddSubscription = () => {
       const token = localStorage.getItem("token");
 
       await axios.post(
-        "https://bill-buddy-bg4f.onrender.com/api/subscriptions",
+       "http://localhost:5000/api/subscriptions",
         {
           name,
           price,

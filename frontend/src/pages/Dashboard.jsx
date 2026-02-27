@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import SubscriptionTable from "../components/SubsciptionTable";
@@ -17,7 +18,7 @@ export default function Dashboard() {
     const fetchSubscriptions = async () => {
       try {
         const res = await axios.get(
-          "https://bill-buddy-bg4f.onrender.com/api/subscriptions",
+           "http://localhost:5000/api/subscriptions",
           {
             headers: {
               Authorization: `Bearer ${token}`,

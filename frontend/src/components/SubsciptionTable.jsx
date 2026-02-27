@@ -156,7 +156,7 @@ export default function SubscriptionTable({ subs, refresh }) {
 
   const del = async (id) => {
     await axios.delete(
-      `https://bill-buddy-bg4f.onrender.com/api/subscriptions/${id}`,
+  `http://localhost:5000/api/subscriptions/${id}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
     refresh();
@@ -176,7 +176,7 @@ export default function SubscriptionTable({ subs, refresh }) {
   const updateSubscription = async () => {
     try {
       await axios.put(
-        `https://bill-buddy-bg4f.onrender.com/api/subscriptions/${editingId}`,
+       `http://localhost:5000/api/subscriptions/${editingId}`,
         editForm,
         {
           headers: { Authorization: `Bearer ${token}` },

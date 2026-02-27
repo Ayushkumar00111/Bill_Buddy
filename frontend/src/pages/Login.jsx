@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
@@ -25,7 +26,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "https://bill-buddy-bg4f.onrender.com/api/auth/login",
+        "http://localhost:5000/api/auth/login",
         formData
       );
 

@@ -1,3 +1,4 @@
+
 // import { useState } from "react";
 // import axios from "axios";
 // import { useNavigate } from "react-router-dom";
@@ -64,8 +65,8 @@
 //     </form>
 //   );
 // };
-
 // export default Register;
+
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
@@ -90,7 +91,7 @@ const Register = () => {
     setError("");
 
     try {
-      await axios.post("https://bill-buddy-bg4f.onrender.com/api/auth/register", formData);
+      await axios.post("http://localhost:5000/api/auth/register", formData);
 
       // ✅ SUCCESS → LOGIN PAGE
       navigate("/login");
