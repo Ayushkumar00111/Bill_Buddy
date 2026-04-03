@@ -47,7 +47,8 @@ npm run dev
 
 Email notifications for upcoming renewals
 
-<img width="1220" height="602" alt="image" src="https://github.com/user-attachments/assets/36bab180-f1cf-4ccd-b0ff-26e764ce332b" />
+
+<img width="1150" height="635" alt="image" src="https://github.com/user-attachments/assets/3cff88e3-b1e4-4cb5-bac9-2b4f9582a6a8" />
 
 Subscription analytics with charts
 
