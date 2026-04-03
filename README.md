@@ -14,6 +14,7 @@ A Full Stack Subscription Management App
 - Fully Deployed (Frontend + Backend)
 <img width="1345" height="603" alt="image" src="https://github.com/user-attachments/assets/69a779eb-a765-42de-a788-63a3a63874f0" />
 ## 🛠 Tech Stack
+
 Frontend:
 - React (Vite)
 - Axios
@@ -58,6 +59,9 @@ Ayush Kumar
 Final Year B.Tech (CSE) Student
 MERN Stack Developer
 2026/02
+
+
 🔗 LinkedIn: https://linkedin.com/in/ayush-kumar-232a1633b
 
-💻 GitHub: https://github.com/Ayushkumar00111
+
+
