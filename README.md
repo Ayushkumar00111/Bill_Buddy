@@ -12,8 +12,8 @@ A Full Stack Subscription Management App
 - Protected Routes
 - MongoDB Database
 - Fully Deployed (Frontend + Backend)
+<img width="954" height="547" alt="image" src="https://github.com/user-attachments/assets/0a7fdede-92b1-4a98-90a4-087cb4b7ba27" />
 
-<img width="1345" height="603" alt="image" src="https://github.com/user-attachments/assets/69a779eb-a765-42de-a788-63a3a63874f0" />
 ## 🛠 Tech Stack
 
 Frontend:
@@ -50,7 +50,8 @@ Email notifications for upcoming renewals
 
 
 
-<img width="1349" height="632" alt="image" src="https://github.com/user-attachments/assets/bc4dd80a-2480-4b70-a46c-ab55dfe0eea2" />
+<img width="1092" height="552" alt="image" src="https://github.com/user-attachments/assets/90e4303a-8e39-468b-8625-cc87087f4ff7" />
+
 Subscription analytics with charts
 
 Dark mode UI
