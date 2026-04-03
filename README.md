@@ -1,6 +1,6 @@
 
-<img width="1349" height="632" alt="image" src="https://github.com/user-attachments/assets/bc4dd80a-2480-4b70-a46c-ab55dfe0eea2" />
 
+<img width="1345" height="603" alt="image" src="https://github.com/user-attachments/assets/69a779eb-a765-42de-a788-63a3a63874f0" />
 # Bill Buddy 💰
 
 A Full Stack Subscription Management App
@@ -12,6 +12,7 @@ A Full Stack Subscription Management App
 - Protected Routes
 - MongoDB Database
 - Fully Deployed (Frontend + Backend)
+
 <img width="1345" height="603" alt="image" src="https://github.com/user-attachments/assets/69a779eb-a765-42de-a788-63a3a63874f0" />
 ## 🛠 Tech Stack
 
@@ -48,8 +49,8 @@ npm run dev
 Email notifications for upcoming renewals
 
 
-<img width="1150" height="635" alt="image" src="https://github.com/user-attachments/assets/3cff88e3-b1e4-4cb5-bac9-2b4f9582a6a8" />
 
+<img width="1349" height="632" alt="image" src="https://github.com/user-attachments/assets/bc4dd80a-2480-4b70-a46c-ab55dfe0eea2" />
 Subscription analytics with charts
 
 Dark mode UI
